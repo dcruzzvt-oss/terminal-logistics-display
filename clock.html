@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Terminal Logistics - Hora</title>
+
+<style>
+
+body{
+margin:0;
+background:#0b4f8c;
+font-family:Arial,sans-serif;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.container{
+text-align:center;
+}
+
+.logo{
+font-size:34px;
+font-weight:bold;
+margin-bottom:30px;
+}
+
+.hora{
+font-size:120px;
+font-weight:bold;
+}
+
+.fecha{
+font-size:45px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+TERMINAL LOGISTICS
+
+</div>
+
+<div id="hora" class="hora"></div>
+
+<div id="fecha" class="fecha"></div>
+
+</div>
+
+<script>
+
+function actualizar(){
+
+const ahora = new Date();
+
+document.getElementById('hora').innerHTML=
+ahora.toLocaleTimeString('es-MX');
+
+document.getElementById('fecha').innerHTML=
+ahora.toLocaleDateString('es-MX',{
+weekday:'long',
+day:'numeric',
+month:'long',
+year:'numeric'
+});
+
+}
+
+setInterval(actualizar,1000);
+
+actualizar();
+
+</script>
+
+</body>
+
+</html>
