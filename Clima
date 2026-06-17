@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Clima AIFA</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+}
+
+iframe{
+width:100%;
+height:100vh;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<iframe src="https://weatherwidget.io/"></iframe>
+
+</body>
+
+</html>
